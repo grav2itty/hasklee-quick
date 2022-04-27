@@ -1,0 +1,25 @@
+name:                hasklee-quick
+version:             0.1.0.0
+github:              "githubuser/hasklee-quick"
+
+dependencies:
+- base >= 4.7 && < 5
+- bytestring
+- conduit
+- conduit-extra
+- fsnotify
+- filepath
+
+library:
+  source-dirs: src
+
+executables:
+  hasklee-quick-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - hasklee
+    - hasklee-quick
